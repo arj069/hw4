@@ -12,7 +12,11 @@ There are no posts to display!
 
 <p>
   <% if @current_user %>
-    <a href="/posts/new?place_id=<%= @place["id"] %>">New Post</a>
+    <div class="d-flex justify-content-end mt-3">
+      <button type="submit" class="btn btn-primary">
+        <a href="/posts/new?place_id=<%= @place["id"] %>">New Post</a>
+      </button>
+    </div>
   <% else %>
   <% end %>
 </p>
